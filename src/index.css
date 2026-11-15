@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #040404;
+    color: #ffffff;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .font-brand {
+    font-family: 'Manrope', sans-serif;
+  }
+}
+
+@utility glass-card {
+  background: rgba(206, 151, 141, 0.05);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+@utility glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  &:hover {
+    background: rgba(206, 151, 141, 0.09);
+    border-color: rgba(255, 131, 5, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px -10px rgba(255, 131, 5, 0.15);
+  }
+}
+
+@utility btn-primary {
+  background-color: #FF8305;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  &:hover {
+    background-color: #ff9426;
+    box-shadow: 0 0 25px rgba(255, 131, 5, 0.5);
+    transform: scale(1.02);
+  }
+}
+
+@utility btn-outline {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  &:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.5);
+  }
+}
+
+@utility text-glow-orange {
+  text-shadow: 0 0 20px rgba(255, 131, 5, 0.6);
+}
+
+@utility glow-orb-orange {
+  background: #FF8305;
+  opacity: 0.35;
+  filter: blur(140px);
+  border-radius: 9999px;
+  pointer-events: none;
+}
